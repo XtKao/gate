@@ -1,0 +1,112 @@
+/* =========================================
+   1. ธีมสี (เหมือนเดิม)
+   ========================================= */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #9ca3af;
+    --border-color: #e5e7eb;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    --hover-bg: #f9fafb;
+}
+
+body.dark-mode {
+    --bg-color: #111827;
+    --card-bg: #1f2937;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    --hover-bg: #374151;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Prompt', sans-serif; }
+
+body {
+    background: var(--bg-color);
+    background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+    color: var(--text-main); padding: 40px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* =========================================
+   2. กล่องหลัก (Portal Container)
+   ========================================= */
+.portal-container {
+    width: 100%; max-width: 480px;
+    margin-top: 40px;
+}
+
+.profile-section { text-align: center; margin-bottom: 40px; }
+
+.profile-img-wrapper {
+    width: 120px; height: 120px; margin: 0 auto 20px;
+    border-radius: 50%; padding: 4px;
+    background: var(--primary-gradient);
+    box-shadow: var(--shadow);
+}
+
+.profile-img-wrapper img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
+    border: 4px solid var(--card-bg); background: var(--card-bg);
+}
+
+h1 { font-size: 1.8rem; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.5px; }
+.bio { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+/* =========================================
+   3. ปุ่มลิ้งค์ (Link Cards) - ปรับปรุงใหม่
+   ========================================= */
+.links-section { display: flex; flex-direction: column; gap: 15px; }
+
+.link-card {
+    display: flex; align-items: center; gap: 15px;
+    background: var(--card-bg); padding: 15px;
+    border-radius: 16px; border: 1px solid var(--border-color);
+    text-decoration: none; color: var(--text-main);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+/* กล่องใส่ไอคอน (Icon Box) */
+.icon-box {
+    width: 45px; height: 45px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 12px;
+    /* สีพื้นหลังและสีไอคอนจะถูกกำหนดแบบ Inline ใน HTML */
+}
+
+.link-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #667eea;
+}
+
+.link-card .text { flex: 1; }
+.link-card .text h3 { font-size: 1rem; font-weight: 600; margin-bottom: 2px; }
+.link-card .text span { font-size: 0.8rem; color: var(--text-muted); }
+.link-card .arrow { color: var(--text-muted); font-weight: bold; transition: 0.2s; }
+.link-card:hover .arrow { transform: translateX(5px); color: #667eea; }
+.main-link { border: 2px solid #667eea; }
+
+/* =========================================
+   4. ปุ่มเปลี่ยนธีม & Footer (เหมือนเดิม)
+   ========================================= */
+.theme-btn {
+    position: fixed; top: 20px; right: 20px;
+    width: 45px; height: 45px; border-radius: 50%;
+    background: var(--card-bg); border: 2px solid var(--border-color);
+    font-size: 20px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow); transition: 0.3s; z-index: 100;
+}
+.theme-btn:hover { transform: rotate(15deg) scale(1.1); }
+
+.footer-credit {
+    margin-top: 50px; text-align: center;
+    font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
+}

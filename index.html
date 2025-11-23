@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanakorn's Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button onclick="toggleTheme()" class="theme-btn" id="theme-toggle-btn">
+        🖋️
+    </button>
+
+    <div class="portal-container">
+        
+        <div class="profile-section">
+            <div class="profile-img-wrapper">
+                <img src="https://ui-avatars.com/api/?name=Tanakorn&background=667eea&color=fff&size=150" alt="Profile" id="profile-img">
+            </div>
+            <h1>Tanakorn Jennadtee</h1>
+            <p class="bio">Web Developer & Creative Thinker<br>ยินดีต้อนรับสู่พื้นที่ส่วนตัวของผมครับ</p>
+        </div>
+
+        <div class="links-section">
+            
+            <a href="todo/index.html" class="link-card main-link">
+                <div class="icon-box" style="background: #e0e7ff; color: #667eea;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/><path d="M9 11l3 3L22 4"/></svg>
+                </div>
+                <div class="text">
+                    <h3>My Workspace</h3>
+                    <span>ระบบจัดการงานและโน้ตส่วนตัว</span>
+                </div>
+                <div class="arrow">➜</div>
+            </a>
+
+            <a href="https://facebook.com" target="_blank" class="link-card">
+                <div class="icon-box" style="background: #dbeafe; color: #1877f2;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"/></svg>
+                </div>
+                <div class="text">
+                    <h3>Facebook</h3>
+                    <span>ติดตามข่าวสาร</span>
+                </div>
+                <div class="arrow">➜</div>
+            </a>
+
+            <a href="https://github.com" target="_blank" class="link-card">
+                <div class="icon-box" style="background: #e5e7eb; color: #1f2937;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </div>
+                <div class="text">
+                    <h3>GitHub</h3>
+                    <span>ดูผลงานโค้ด</span>
+                </div>
+                <div class="arrow">➜</div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-credit">
+        © Designed By Tanakorn Jennadtee<br>
+        Powered by Gemini 3 Pro
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
